@@ -1,11 +1,11 @@
-import { optional, string, z } from "zod";
+import { email, optional, string, z } from "zod";
 export const signupInput = z.object({
-    username: z.string().email(),
+    email: z.string().email(),
     password: z.string().min(6),
-    name: string(), optional
+    name: string().optional()
 });
 export const signinInput = z.object({
-    username: z.string().email(),
+    email: z.string().email(),
     password: z.string().min(6),
 });
 export const createPostInput = z.object({

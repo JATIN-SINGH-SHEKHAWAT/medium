@@ -1,0 +1,29 @@
+import { Appbar } from "../components/Appbar";
+import { BlogCard } from "../components/BlogCard";
+import { useBlogs } from "../hooks";
+
+export const Blogs = () => {
+  const { loading, posts } = useBlogs();
+
+  if (loading) {
+    return <div>loading</div>;
+  }
+  return (
+    <div>
+      <Appbar />
+      <div className="flex justify-center">
+        <div>
+          {posts.map((post) => (
+            <BlogCard
+              id={post.id}
+              authorName={post.author.name || "Anonyms"}
+              title={post.title}
+              content={post.content}
+              publishedDate={"2nd Feb 2025"}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};

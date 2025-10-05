@@ -1,12 +1,11 @@
-import { optional, z } from "zod";
+import { z } from "zod";
 export declare const signupInput: z.ZodObject<{
-    username: z.ZodString;
+    email: z.ZodString;
     password: z.ZodString;
-    name: z.ZodString;
-    optional: typeof optional;
+    name: z.ZodOptional<z.ZodString>;
 }, z.core.$strip>;
 export declare const signinInput: z.ZodObject<{
-    username: z.ZodString;
+    email: z.ZodString;
     password: z.ZodString;
 }, z.core.$strip>;
 export declare const createPostInput: z.ZodObject<{

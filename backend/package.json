@@ -7,9 +7,7 @@
     "cf-typegen": "wrangler types --env-interface CloudflareBindings"
   },
   "dependencies": {
-    "@jatin0001/mediumm-common": "^1.0.0",
-    "@jatin0001/mediumm-commonn": "^1.0.0",
-    "@jatin0001/mediumm-commonn1": "^1.0.0",
+    "@jatin0001/medium-blog-common": "^1.0.3",
     "@prisma/client": "^6.16.1",
     "@prisma/extension-accelerate": "^2.0.2",
     "hono": "^4.9.7",

@@ -1,6 +1,6 @@
 {
-  "name": "@jatin0001/mediumm-commonn1",
-  "version": "1.0.0",
+  "name": "@jatin0001/medium-blog-common",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/index.js",
   "scripts": {

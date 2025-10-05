@@ -1,8 +1,7 @@
-import { PrismaClient } from '@prisma/client/edge'
-import { withAccelerate } from '@prisma/extension-accelerate'
 import { Hono } from 'hono';
 import { userRouter } from './routes/user';
 import { blogRouter } from './routes/blog';
+import { cors } from 'hono/cors'
 
 import { sign, verify } from 'hono/jwt'
 
@@ -14,8 +13,11 @@ const app = new Hono<{
 	}
 }>();
 
+app.use('/*',cors())
 app.route("/api/v1/user", userRouter);
 app.route("/api/v1/blog", blogRouter);
 
 
 export default app;
+
+// check the video at 1hour 27 minute to deploy your aoo
