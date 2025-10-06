@@ -48,7 +48,7 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
           <div className="pt-6">
             {type === "signup" ? (
               <LabeledInput
-                label="name"
+                label="Name"
                 type={"text"}
                 placeholder="Enter the Username"
                 onChange={(e) => {

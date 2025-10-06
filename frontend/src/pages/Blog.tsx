@@ -1,3 +1,5 @@
+import { Appbar } from "../components/Appbar";
+import { BlogSkeleton, FullBlogSkeleton } from "../components/BlogSkelton";
 import { FullBlog } from "../components/FullBlog";
 import { useBlog } from "../hooks"
 import { useParams } from "react-router-dom";
@@ -13,7 +15,9 @@ export const Blog = () => {
 
     if(loading || !post) { //we can either use here the laoding skelton
         return <div>
-            loading..
+         <div>
+            <FullBlogSkeleton />
+        </div>
         </div>
     }
     return <div>
